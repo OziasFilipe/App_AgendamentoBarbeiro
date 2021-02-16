@@ -40,7 +40,6 @@ function TabNavigation(){
 export default function router(){
     return(
         <NavigationContainer>
-       
             <SnackNavigation/>
         </NavigationContainer>
     );
