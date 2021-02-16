@@ -6,12 +6,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import Login from './src/pages/Login';
 //
 import Router from './src/routes/router'
-
+let logado = true;
 export default function App() {
   return (
-    <NavigationContainer >
-      <Router/>
-    </NavigationContainer>
+    
+       <Router/>
+    
     
   );
 }
@@ -24,3 +24,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
 });
+
+
+
+
+function EstaLogado(){
+  let Logado = true;
+  if (Logado){
+    return 
+  }
+}

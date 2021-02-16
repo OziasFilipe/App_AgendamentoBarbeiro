@@ -3,15 +3,16 @@ import React from 'react'
 import { StyleSheet,View,Image,Text, Alert } from 'react-native';
 import {Button, Title,Avatar} from 'react-native-paper';
 
-export default function TelaInicial(){
+
+export default function TelaInicial({navigation}){
     return(
         <View style = {styles.conteiner}> 
             <Avatar.Image size={200} source = {require('../image/Logo.png')} />
             <Title style = {{color:'white',fontSize:40,paddingTop:40}} >Nome Aplicação</Title>
-            <Button mode = 'contained'  color = '#24303C' style = {styles.BotaoAgendeAgora}>
+            <Button mode = 'contained'  color = '#24303C' style = {styles.BotaoAgendeAgora} onPress = {()=> {Alert.alert('Agende Agora')}}>
                 <Title style = {{color:'white'}}>AGENDE AGORA</Title>
             </Button>
-            <Button mode = 'contained' color = '#00FFC4' style = {styles.BotaoLogin}>
+            <Button mode = 'contained' color = '#00FFC4' style = {styles.BotaoLogin} onPress = {()=> navigation.navigate('Login')}>
                 <Title>LOGIN</Title>
             </Button>
        

@@ -1,8 +1,13 @@
 import React from 'react' 
 //import {View} from 'react-native-paper'
-import { StyleSheet,View,Text} from 'react-native';
+import { StyleSheet,View,Text, TouchableHighlight, Alert, TouchableOpacity} from 'react-native';
 import {Button, Title } from 'react-native-paper';
 import { TextInput } from 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Router from '../routes/router'
+import UserCadastro from './UserCadastro'
+
 export default function Login(){
     return(
         <View style = {styles.container}>
@@ -15,10 +20,11 @@ export default function Login(){
                 </View>
                 <View >
                     <TextInput secureTextEntry={true} placeholder= 'Senha' style = {styles.senha}></TextInput>
-                    <Title style = {styles.esqueciSenha}>Esqueci minha senha</Title>
+                    <TouchableOpacity onPress = {()=> {Alert.alert('Esqueci minha senha')}}><Title style = {styles.esqueciSenha}>Esqueci minha senha</Title></TouchableOpacity>
                 </View>
                 <View >
-                    <Button mode = 'contained' color = '#00FFC4' style = {styles.botaoentrar}><Text style = {styles.texto}>Entrar</Text></Button>
+                    <Button mode = 'contained' color = '#00FFC4' style = {styles.botaoentrar} 
+                   ><Text style = {styles.texto}>Entrar</Text></Button>
                 </View>
             </View>
         </View>
