@@ -12,7 +12,7 @@ export default function TelaInicial({navigation}){
             <Button mode = 'contained'  color = '#24303C' style = {styles.BotaoAgendeAgora} onPress = {()=> {Alert.alert('Agende Agora')}}>
                 <Title style = {{color:'white'}}>AGENDE AGORA</Title>
             </Button>
-            <Button mode = 'contained' color = '#00FFC4' style = {styles.BotaoLogin} onPress = {()=> navigation.navigate('Login')}>
+            <Button mode = 'contained' color = '#00FFC4' style = {styles.BotaoLogin} onPress = {()=> {navigation.navigate('Login')}}>
                 <Title>LOGIN</Title>
             </Button>
        

@@ -34,6 +34,7 @@ function TabNavigation(){
             <Tab.Screen name = 'ClientCadastro2' component = {ClientCadastro2}/>
             <Tab.Screen name = 'ListaBarbeiro' component = {ListaBarbeiro}/>
             <Tab.Screen name = 'UserCadastro' component = {UserCadastro}/>
+            <Tab.Screen name = 'Login' component = {Login}/>
         </Tab.Navigator>
     );
 }

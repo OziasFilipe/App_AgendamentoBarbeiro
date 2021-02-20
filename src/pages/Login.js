@@ -8,7 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Router from '../routes/router'
 import UserCadastro from './UserCadastro'
 
-export default function Login(){
+export default function Login({navigation}){
     return(
         <View style = {styles.container}>
             <View style = {styles.contained}>
@@ -22,10 +22,12 @@ export default function Login(){
                     <TextInput secureTextEntry={true} placeholder= 'Senha' style = {styles.senha}></TextInput>
                     <TouchableOpacity onPress = {()=> {Alert.alert('Esqueci minha senha')}}><Title style = {styles.esqueciSenha}>Esqueci minha senha</Title></TouchableOpacity>
                 </View>
-                <View >
+                <View styles = {styles.botoes}>
                     <Button mode = 'contained' color = '#00FFC4' style = {styles.botaoentrar} 
                    ><Text style = {styles.texto}>Entrar</Text></Button>
+                   <TouchableOpacity style = {{top:60,left:35}}onPress = {()=>{navigation.navigate('ClientCadastro')}}><Text style = {{color:'white'}}>CADASTRAR!</Text></TouchableOpacity>
                 </View>
+                
             </View>
         </View>
     );
@@ -37,13 +39,15 @@ const styles  = StyleSheet.create({
        justifyContent: 'center',
        alignItems:'center',
        backgroundColor:  '#24303C',
+       flexDirection:'column'
        
     },
     contained:{
         
         justifyContent:'center',
         alignItems: 'center',
-        flex:1
+        flex:1,
+        flexDirection:'column'
     },
     email:{
         backgroundColor:'white',
@@ -51,7 +55,7 @@ const styles  = StyleSheet.create({
         width:318,
         height:60,
         textAlign:'center',
-        bottom:40,
+        bottom:40
         
         
     },
@@ -80,6 +84,7 @@ const styles  = StyleSheet.create({
         borderRadius:10,
         height:50,
         width:154,
+        
     },
 
     textobotao:{
